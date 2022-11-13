@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Product Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <div class="product-imgs">
+                    <img src="images/Exiles.png" alt="book image">
+                </div>
+                <div class="product-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <p><ins>write a rewiew</ins></p>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="product-content">
+                    <h2 class="product-title">Exiles</h2>
+                    <div class="row">
+                        <div class="col-sm-3">By Jane Harper</div>
+                        <div class="col-sm-3">Hardcover</div>
+                        <div class="col-sm-3">20 September 2022</div>
+                    </div>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="product-price">
+                                <p><span style="color:red">$29.99 </span> <del> RPP $39.99</del></p>
+                            </div>
+                            <div class="purchase-info">
+                                <input type="number" min="0" value="1">
+                                <button type="button" class="btn">
+                                    ADD TO CART <i class="fas fa-shopping-cart"></i>
+                                </button>
+
+                            </div>
+                        </div>
+                        <div class="tab">
+                            <button class="tablinks" onclick="openLocation(event, 'Online')">Online</button>
+                            <button class="tablinks" onclick="openLocation(event, 'InStore')">In Store</button>
+                        </div>
+
+                        <div id="Online" class="tabcontent">
+                            <h3>Online</h3>
+                            <p class="Online">SHIP IN 5-15 DAYS</p>
+                        </div>
+
+                        <div id="InStore" class="tabcontent">
+                            <h3>In-Store</h3>
+                            <p>Check Availability In-Store</p>
+                        </div>
+
+                        <script>
+                            function openLocation(evt, locationName) {
+                                var i, tabcontent, tablinks;
+                                tabcontent = document.getElementsByClassName("tabcontent");
+                                for (i = 0; i < tabcontent.length; i++) {
+                                    tabcontent[i].style.display = "none";
+                                }
+                                tablinks = document.getElementsByClassName("tablinks");
+                                for (i = 0; i < tablinks.length; i++) {
+                                    tablinks[i].className = tablinks[i].className.replace(" active", "");
+                                }
+                                document.getElementById(locationName).style.display = "block";
+                                evt.currentTarget.className += " active";
+                            }
+                        </script>
+
+                        <div class="product-detail">
+
+                            <h2>About this item: </h2>
+                            <p>The compelling new novel from Jane Harper, the internationally bestselling author of The Dry.
+
+                                At a busy festival site on a warm spring night, a baby lies alone in her pram, her mother vanishing into the crowds. A year on, Kim Gillespie's absence casts a long shadow as her friends and loved ones gather deep in the heart of South Australian wine country to welcome a new addition to the family. Joining the celebrations is federal investigator Aaron Falk. But as he soaks up life in the lush valley, he begins to suspect this tight-knit group may be more fractured than it seems.
+                                
+                                Between Falk's closest friend, a missing mother, and a woman he's drawn to, dark questions linger as long-ago truths begin to emerge.</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container2">
+        <div class="tab">
+            <button class="tablinks" onclick="openMenu(event, '1')">Product Details</button>
+            <button class="tablinks" onclick="openMenu(event, '2')">Rating & Review</button>
+            <button class="tablinks" onclick="openMenu(event, '3')">Shipping and Return</button>
+        </div>
+
+        <div id="1" class="tabcontent">
+            <h3>PRODUCT DETAILS</h3>
+            <div>Title: Exiles</div>
+            <div>Author: Jane Harper</div>
+            <div>Publisher: Pan Macmillan Australia</div>
+            <div>ISBN: 9781760988425</div>
+        </div>
+
+        <div id="2" class="tabcontent">
+            <h3>RATINGS & REVIEW</h3>
+            <div>GOODREADS REVIEWS FOR THE BOOK OF ROADS AND KINGDOMS</div>
+            <div>Write a review</div>
+        </div>
+
+        <div id="3" class="tabcontent">
+            <h3>SHIPPING AND RETURNS</h3>
+
+            <li>Delivery options: Shipping to an Australian address</li>
+            <li>When will my book be dispatched from your warehouse?</li>
+            <li>When will my order arrive?</li>
+            <li>Tracking delivery</li>
+            <li>International orders</li>
+            <li>Delivery restrictions</li>
+            <li>Problems with your delivery</li>
+        </div>
+
+        <script>
+            function openMenu(evt, menuName) {
+                var i, tabcontent, tablinks;
+                tabcontent = document.getElementsByClassName("tabcontent");
+                for (i = 0; i < tabcontent.length; i++) {
+                    tabcontent[i].style.display = "none";
+                }
+                tablinks = document.getElementsByClassName("tablinks");
+                for (i = 0; i < tablinks.length; i++) {
+                    tablinks[i].className = tablinks[i].className.replace(" active", "");
+                }
+                document.getElementById(menuName).style.display = "block";
+                evt.currentTarget.className += " active";
+            }
+        </script>
+
+    </div>
+    <div class="container">
+        <h3>YOU MAY ALSO LIKE</h3>
+        <div class="collection">
+            <div>
+                <img src="images/Mythos.png" alt="book image">
+                <P>Exiles</P>
+                <p><span style="color:red">$29.99 </span> <del> RPP $39.99</del></p>
+            </div>
+            <div>
+                <img src="images/The Book Of Roads And Kingdoms.png" alt="book image">
+                <p>Mythos</p>
+                <p><span style="color:red">$29.99 </span> <del> RPP $39.99</del></p>
+            </div>
+            <div>
+                <img src="images/It start with us.png" alt="book image">
+                <P>It start with us</P>
+                <p><span style="color:red">$24.99 </span> <del> RPP $39.99</del></p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
